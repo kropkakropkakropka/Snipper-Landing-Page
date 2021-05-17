@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('Assets/Background.png');
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 90px 0 90px;
+    font-size: 1em;
+    font-weight: 500;
+}
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+}
+.navbar ul li{
+    list-style: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.navbar ul li a{
+    color: black;
+    text-decoration: none;
+}
+.navbar ul li:nth-child(3) a{
+    background: black;
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+}
+.navbar ul li:nth-child(3) a span{
+    color: lightgrey;
+}
