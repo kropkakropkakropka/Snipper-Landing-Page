@@ -5,21 +5,46 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-body{
-    background: url('Assets/Background.png');
-    background-size: cover;
-}
 .container{
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
-.navbar{
+body{
+    background: url('Assets/Background.png');
+    background-size: cover;
+}
+nav{
     display: flex;
     justify-content: space-between;
     margin: 40px 180px 0 180px;
     font-weight: 500;
     font-size: 1.2em;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+}
+ul li{
+    list-style: none;
+    margin-right: 25px;
+    cursor: pointer;
+}
+ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+#btn{
+    cursor: pointer;
+    background: black;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+#btn span{
+    color: lightgrey;
 }
 #menu{
     display: none;
@@ -39,62 +64,7 @@ body{
 #dropdown{
     margin-left: 5px;
 }
-@media only screen and (max-width: 1300px){
-    .navbar{
-        margin: 40px 100px 0 100px;
-    }
-}
-@media only screen and (max-width: 1100px){
-    .navbar{
-        margin: 40px 20px 0 20px;
-        font-size: 1em;
-    }
-}
-@media only screen and (max-width: 500px){
-    .navbar{
-        margin: 20px 5px 0 5px;
-        font-size: 1em;
-    }
-}
-ul{
-    display: flex;
-    flex-direction: row;
-}
-@media only screen and (max-width: 500px){
-    .navbar .nav-links ul{
-        display: none;
-    }
-}
-@media only screen and (max-width: 500px){
-    .navbar #menu{
-        display: block;
-    }
-}
-ul li{
-    list-style: none;
-    margin-right: 25px;
-    cursor: pointer;
-}
-ul li a{
-    color: black;
-    text-decoration: none;
-}
-#btn{
-    cursor: pointer;
-    background: black;
-    padding: 15px;
-    border-radius: 5px;
-    color: white;
-    border: none;
-}
-@media only screen and (max-width: 500px){
-    .button #btn{
-        padding: 15px 95px 15px 95px;
-    }
-}
-#btn span{
-    color: lightgrey;
-}
+
 .main{
     display: flex;
     justify-content: center;
@@ -102,16 +72,7 @@ ul li a{
     text-align: center;
     margin-top: 100px;
 }
-@media only screen and (max-width: 1100px){
-    .main{
-        margin-top: 60px;
-    }
-}
-@media only screen and (max-width: 500px){
-    .main{
-        margin-top: 40px;
-    }
-}
+
 .main h1{
     font-size: 3.5em;
     font-weight: 700;
@@ -124,39 +85,11 @@ ul li a{
     font-size: 1.2em;
     padding: 30px 0 0px;
 }
-@media only screen and (max-width: 1100px){
-    .button{
-        font-size: 1em;
-    }
-}
 .main img{
     height: 485px;
     margin: 70px 180px 0px 180px;
 }
-@media only screen and (max-width: 1300px){
-    .main img{
-        height: 430px;
-        margin: 40px 100px 0 100px;
-    }
-}
-@media only screen and (max-width: 800px){
-    .main img{
-        height: 450px;
-        margin: 60px 20px 0 20px;
-    }
-}
-@media only screen and (max-width: 1100px){
-    .main img{
-        height: 450px;
-        margin: 60px 20px 0 20px;
-    }
-}
-@media only screen and (max-width: 500px){
-    .main img{
-        height: 405px;
-        margin: 60px 10px 0 10px;
-    }
-}
+
 .bottom-section{
     background: white;
 }
@@ -165,7 +98,51 @@ ul li a{
     justify-content: space-evenly;
     padding-top: 110px;
 }
+.info{
+    width: 40%;
+}
+.info h1{
+    font-size: 2.8em;
+}
+.info p{
+    padding-top: 20px;
+    font-size: 1.3em;
+}
+.info #btn{
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+.bottom img{
+    width: 30%;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 180px 60px 180px;
+    background: white;
+}
+@media only screen and (max-width: 1300px){
+    nav{
+        margin: 40px 100px 0 100px;
+    }
+    .main img{
+        height: 430px;
+        margin: 40px 100px 0 100px;
+    }
+}
 @media only screen and (max-width: 1100px){
+    nav{
+        margin: 40px 20px 0 20px;
+        font-size: 1em;
+    }
+    .main{
+        margin-top: 60px;
+    }
+    .main img{
+        height: 450px;
+        margin: 60px 20px 0 20px;
+    }
     .bottom{
         display: flex;
         flex-direction: column-reverse;
@@ -173,71 +150,63 @@ ul li a{
         align-items: center;
         padding-top: 50px;
     }
-}
-.info{
-    width: 40%;
-}
-@media only screen and (max-width: 1100px){
+    .button{
+        font-size: 1em;
+    }
     .info{
         padding: 50px 30px 0 30px;
         width: 100%;
     }
-}
-.info h1{
-    font-size: 2.8em;
-}
-@media only screen and (max-width: 500px){
-    .info h1{
-        font-size: 2em;
+    .footer{
+        padding: 60px 20px 40px 20px;
     }
-}
-.info p{
-    padding-top: 20px;
-    font-size: 1.3em;
-}
-@media only screen and (max-width: 500px){
-    .info p{
-        font-size: 1.2em;
-    }
-}
-.info #btn{
-    margin-top: 15px;
-    font-size: 1.2em;
-}
-@media only screen and (max-width: 500px){
-    .info #btn{
-        font-size: 1em;
-    }
-}
-.bottom img{
-    width: 30%;
-}
-@media only screen and (max-width: 1100px){
     .bottom img{
         width: 60%;
     }
 }
-.footer{
-    display: flex;
-    justify-content: space-between;
-    padding: 60px 180px 60px 180px;
-    background: white;
-}
-@media only screen and (max-width: 1100px){
-    .footer{
-        padding: 60px 20px 40px 20px;
+@media only screen and (max-width: 800px){
+    .main img{
+        height: 450px;
+        margin: 60px 20px 0 20px;
     }
 }
 @media only screen and (max-width: 500px){
+    nav{
+        margin: 20px 5px 0 5px;
+        font-size: 1em;
+    }
+    nav #menu{
+        display: block;
+    }
+    nav .nav-links ul{
+        display: none;
+    }
+    .main{
+        margin-top: 40px;
+    }
+    .main img{
+        height: 405px;
+        margin: 60px 10px 0 10px;
+    }
+    .info h1{
+        font-size: 2em;
+    }
+    .info #btn{
+        font-size: 1em;
+    }
+    .info p{
+        font-size: 1.2em;
+    }
     .footer{
         display: flex;
         flex-direction: column;
         padding: 60px 20px 20px 20px;
     }
-}
-@media only screen and (max-width: 500px){
     .footer img{
         width: 30%;
         padding-bottom: 10px;
+    }
+    .button #btn{
+        padding: 15px 95px 15px 95px;
     }
 }
